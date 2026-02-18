@@ -27,8 +27,8 @@ export default function Navigation() {
           <img
             src="/Logo_black.png"
             alt="PEVio"
-            width={120}
-            height={39}
+            width={60}
+            height={20}
           />
         </Link>
 

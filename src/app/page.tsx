@@ -66,8 +66,8 @@ export default async function Home() {
               <img
                 src="/Logo_black.png"
                 alt="PEVio"
-                width={144}
-                height={47}
+                width={72}
+                height={24}
               />
             </div>
 

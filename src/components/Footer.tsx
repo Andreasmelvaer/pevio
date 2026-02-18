@@ -23,8 +23,8 @@ export default function Footer() {
             <img
               src="/Logo_white.png"
               alt="PEVio"
-              width={94}
-              height={31}
+              width={47}
+              height={16}
             />
             <p className="mt-3 text-sm text-gray-400">
               Applied Specialized Intelligence for Private Equity

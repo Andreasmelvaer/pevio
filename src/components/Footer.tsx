@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const footerLinks = [
@@ -20,7 +19,8 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/Logo_white.svg"
               alt="PEVio"
               width={94}

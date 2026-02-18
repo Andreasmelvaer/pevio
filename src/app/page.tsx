@@ -1,8 +1,6 @@
 import { getSplashPageData } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
 import Link from "next/link";
-import Image from "next/image";
-
 const defaults = {
   heading: "Due Diligence, Reimagined.",
   tagline:
@@ -63,14 +61,13 @@ export default async function Home() {
         {/* Left Panel */}
         <div className="flex w-full flex-col justify-center px-8 py-16 md:w-[53%] md:px-20 lg:px-28">
           <div className="mx-auto w-full max-w-md">
-            <div className="mb-10">
-              <Image
+            <div className="mb-10 md:hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/Logo_black.svg"
                 alt="PEVio"
                 width={144}
                 height={47}
-                priority
-                className="md:hidden"
               />
             </div>
 

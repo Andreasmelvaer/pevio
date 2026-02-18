@@ -25,7 +25,7 @@ export default function Navigation() {
         <Link href="/" className="flex-shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/Logo_black.svg"
+            src="/Logo_black.png"
             alt="PEVio"
             width={120}
             height={39}

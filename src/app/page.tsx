@@ -64,7 +64,7 @@ export default async function Home() {
             <div className="mb-10 md:hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/Logo_black.svg"
+                src="/Logo_black.png"
                 alt="PEVio"
                 width={144}
                 height={47}

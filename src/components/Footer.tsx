@@ -21,7 +21,7 @@ export default function Footer() {
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/Logo_white.svg"
+              src="/Logo_white.png"
               alt="PEVio"
               width={94}
               height={31}

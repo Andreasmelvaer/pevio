@@ -48,7 +48,7 @@ export default function ContactForm() {
           Thanks for reaching out
         </h3>
         <p className="text-sm text-gray-500">
-          We&apos;ll get back to you within 24 hours.
+          We&apos;ll be in touch soon.
         </p>
       </div>
     );

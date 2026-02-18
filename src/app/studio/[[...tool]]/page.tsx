@@ -8,6 +8,7 @@ import {
   productPageSchema,
   aboutPageSchema,
   contactPageSchema,
+  contactSubmissionSchema,
 } from "@/sanity/schema";
 
 const config = defineConfig({
@@ -18,7 +19,7 @@ const config = defineConfig({
   basePath: "/studio",
   plugins: [structureTool()],
   schema: {
-    types: [splashPageSchema, productPageSchema, aboutPageSchema, contactPageSchema],
+    types: [splashPageSchema, productPageSchema, aboutPageSchema, contactPageSchema, contactSubmissionSchema],
   },
 });
 

@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PEVio - Coming Soon",
-  description: "Smart Data, Smarter Investments. Sign up for early access.",
+  title: "PEVio — Applied Specialized Intelligence for PE",
+  description:
+    "Decision infrastructure for Private Equity. Auditable intelligence from due diligence through exit.",
 };
 
 export default function RootLayout({
@@ -16,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navigation />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

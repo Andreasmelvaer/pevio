@@ -3,7 +3,12 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { Studio } from "sanity";
-import { splashPageSchema } from "@/sanity/schema";
+import {
+  splashPageSchema,
+  productPageSchema,
+  aboutPageSchema,
+  contactPageSchema,
+} from "@/sanity/schema";
 
 const config = defineConfig({
   name: "pevio",
@@ -13,7 +18,7 @@ const config = defineConfig({
   basePath: "/studio",
   plugins: [structureTool()],
   schema: {
-    types: [splashPageSchema],
+    types: [splashPageSchema, productPageSchema, aboutPageSchema, contactPageSchema],
   },
 });
 

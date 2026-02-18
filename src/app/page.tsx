@@ -1,6 +1,30 @@
-"use client";
+import { getSplashPageData } from "@/sanity/queries";
+import { urlFor } from "@/sanity/image";
 
-export default function Home() {
+// Fallback defaults if Sanity has no content yet
+const defaults = {
+  heading: "Coming Soon",
+  tagline:
+    "We're building a smarter way to access investment data. Be the first to know when we launch.",
+  sidebarHeadingLine1: "Smart Data,",
+  sidebarHeadingLine2: "Smarter Investments",
+  sidebarBrandName: "PEVio",
+};
+
+export const revalidate = 60; // ISR: revalidate every 60 seconds
+
+export default async function Home() {
+  const data = await getSplashPageData();
+
+  const heading = data?.heading || defaults.heading;
+  const tagline = data?.tagline || defaults.tagline;
+  const sidebarLine1 = data?.sidebarHeadingLine1 || defaults.sidebarHeadingLine1;
+  const sidebarLine2 = data?.sidebarHeadingLine2 || defaults.sidebarHeadingLine2;
+  const brandName = data?.sidebarBrandName || defaults.sidebarBrandName;
+  const bgImageUrl = data?.backgroundImage
+    ? urlFor(data.backgroundImage).width(1200).quality(80).url()
+    : "/sidebar-bg.jpg";
+
   return (
     <div className="flex min-h-screen">
       {/* Left Panel */}
@@ -15,34 +39,10 @@ export default function Home() {
 
           {/* Heading */}
           <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Coming Soon
+            {heading}
           </h1>
           <p className="mb-10 text-lg leading-relaxed text-gray-500">
-            We&apos;re building a smarter way to access investment data.
-            Be the first to know when we launch.
-          </p>
-
-          {/* Email Capture Form */}
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="flex flex-col gap-3 sm:flex-row"
-          >
-            <input
-              type="email"
-              placeholder="Enter your email"
-              required
-              className="flex-1 rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
-            />
-            <button
-              type="submit"
-              className="whitespace-nowrap rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            >
-              Notify Me
-            </button>
-          </form>
-
-          <p className="mt-4 text-xs text-gray-400">
-            No spam. We&apos;ll only send you launch updates.
+            {tagline}
           </p>
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function Home() {
       <div
         className="relative hidden md:flex md:w-[47%] md:flex-col md:items-center md:justify-center"
         style={{
-          backgroundImage: "url('/sidebar-bg.jpg')",
+          backgroundImage: `url('${bgImageUrl}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -62,15 +62,15 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center px-12 text-center text-white">
           <h2 className="text-3xl font-bold leading-snug lg:text-4xl">
-            Smart Data,
+            {sidebarLine1}
             <br />
-            Smarter Investments
+            {sidebarLine2}
           </h2>
         </div>
 
         {/* Bottom brand */}
         <p className="absolute bottom-8 z-10 text-sm font-medium tracking-widest text-white/70">
-          PEVio
+          {brandName}
         </p>
       </div>
     </div>

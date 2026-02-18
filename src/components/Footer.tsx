@@ -44,8 +44,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
-          &copy; {new Date().getFullYear()} PEVio. All rights reserved.
+        <div className="mt-10 flex flex-col items-center gap-3 border-t border-gray-800 pt-6 text-xs text-gray-500">
+          <a
+            href="https://www.linkedin.com/company/pev-io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 transition-colors hover:text-white"
+          >
+            Follow us on LinkedIn
+          </a>
+          <span>&copy; {new Date().getFullYear()} PEVio. All rights reserved.</span>
         </div>
       </div>
     </footer>

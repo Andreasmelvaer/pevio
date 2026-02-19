@@ -107,13 +107,13 @@ export default async function AboutPage() {
                 className="card-hover overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm"
               >
                 {/* Photo */}
-                <div className="flex h-48 items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50">
+                <div className="flex h-56 items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50">
                   {member.photo ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={urlFor(member.photo).width(300).height(300).url()}
+                      src={urlFor(member.photo).width(400).height(400).url()}
                       alt={member.name}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover object-top"
                     />
                   ) : (
                     <span className="text-4xl font-bold text-gray-300">

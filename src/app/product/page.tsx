@@ -42,7 +42,7 @@ export default async function ProductPage() {
           </div>
           <div className="mx-auto max-w-2xl space-y-4 text-[15px] leading-relaxed text-gray-500">
             <p>
-              A typical mid-market transaction consumes 500 to 1,100+ partner and analyst hours. Firms spend &pound;1 to &pound;5 million annually on manual document review, cross-referencing, and synthesis. Critical issues are missed depending on who reviews the room. And institutional knowledge walks out the door when team members move on.
+              A typical mid-market transaction consumes 500 to 1,100+ partner and analyst hours. Firms spend $1 to $5 million annually on manual document review, cross-referencing, and synthesis. Critical issues are missed depending on who reviews the room. And institutional knowledge walks out the door when team members move on.
             </p>
             <p>
               The industry has tried to solve this with faster workflows and smarter data rooms. But the bottleneck is not speed of access. It is speed of judgement.
@@ -53,7 +53,7 @@ export default async function ProductPage() {
           <div className="mt-14 grid gap-4 md:grid-cols-3">
             {[
               { metric: "500\u20131,100+", label: "hours per deal" },
-              { metric: "\u00a31\u20135M", label: "annual DD cost" },
+              { metric: "$1–5M", label: "annual DD cost" },
               { metric: "75%", label: "of workflow still manual" },
             ].map((stat, i) => (
               <div

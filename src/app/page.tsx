@@ -151,7 +151,7 @@ export default async function Home() {
               Why the smartest capital still moves slowly.
             </h2>
             <p className="text-[15px] leading-relaxed text-gray-500">
-              Mid-market PE firms spend up to &pound;2 million per transaction on manual diligence. Signal is buried under process, institutional memory disappears between deal cycles, and AI adoption stalls because Investment Committees cannot explain how conclusions were reached.
+              Mid-market PE firms spend up to $2 million per transaction on manual diligence. Signal is buried under process, institutional memory disappears between deal cycles, and AI adoption stalls because Investment Committees cannot explain how conclusions were reached.
             </p>
           </div>
 

@@ -10,6 +10,28 @@ export const metadata: Metadata = {
   title: "PEVio — Applied Specialized Intelligence for PE",
   description:
     "Decision infrastructure for Private Equity. Auditable intelligence from due diligence through exit.",
+  openGraph: {
+    title: "PEVio — Applied Specialized Intelligence for PE",
+    description:
+      "Decision infrastructure for Private Equity. Auditable intelligence from due diligence through exit.",
+    images: [
+      {
+        url: "/Sahring.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PEVio",
+      },
+    ],
+    type: "website",
+    siteName: "PEVio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PEVio — Applied Specialized Intelligence for PE",
+    description:
+      "Decision infrastructure for Private Equity. Auditable intelligence from due diligence through exit.",
+    images: ["/Sahring.jpg"],
+  },
 };
 
 export default function RootLayout({

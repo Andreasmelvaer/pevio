@@ -202,7 +202,7 @@ export default async function ProductPage() {
               <tbody className="text-gray-500">
                 {[
                   ["Designed for", "Broad use cases", "Document management", "PE Investment Committees"],
-                  ["Intelligence", "General language models", "Rules-based automation", "Institutional DD frameworks, 1,000+ questions"],
+                  ["Intelligence", "General language models", "Rules-based automation", "Institutional DD frameworks, 1,800+ questions"],
                   ["Learning", "Static", "Static", "Learns your fund\u2019s decision DNA over time"],
                   ["Explainability", "Limited or none", "N/A", "Every conclusion source-linked, auditable, defensible"],
                   ["Lifecycle", "Point-in-time", "Diligence phase only", "Diligence through exit"],

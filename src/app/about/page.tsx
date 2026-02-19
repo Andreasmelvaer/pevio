@@ -49,6 +49,12 @@ const defaultData = {
   ],
 };
 
+const localPhotos: Record<string, string> = {
+  "Hichem Frija": "/Hichem_Square.png",
+  "Christian A. Hvamstad": "/Christian_square.png",
+  "Andreas Larsson": "/Andreas_Square.png",
+};
+
 export default async function AboutPage() {
   const data = await getAboutPageData();
 
@@ -113,7 +119,14 @@ export default async function AboutPage() {
                     <img
                       src={urlFor(member.photo).width(400).height(400).url()}
                       alt={member.name}
-                      className="h-full w-full object-cover object-top"
+                      className="h-full w-full object-cover object-center"
+                    />
+                  ) : localPhotos[member.name] ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={localPhotos[member.name]}
+                      alt={member.name}
+                      className="h-full w-full object-cover object-center"
                     />
                   ) : (
                     <span className="text-4xl font-bold text-gray-300">

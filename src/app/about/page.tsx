@@ -114,17 +114,17 @@ export default async function AboutPage() {
               >
                 {/* Photo */}
                 <div className="flex h-56 items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50">
-                  {member.photo ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={urlFor(member.photo).width(400).height(400).url()}
-                      alt={member.name}
-                      className="h-full w-full object-cover object-center"
-                    />
-                  ) : localPhotos[member.name] ? (
+                  {localPhotos[member.name] ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={localPhotos[member.name]}
+                      alt={member.name}
+                      className="h-full w-full object-cover object-center"
+                    />
+                  ) : member.photo ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={urlFor(member.photo).width(400).height(400).url()}
                       alt={member.name}
                       className="h-full w-full object-cover object-center"
                     />

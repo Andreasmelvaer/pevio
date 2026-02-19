@@ -41,35 +41,47 @@ export default async function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-gray-900 to-gray-800 px-6 py-24 text-center text-white">
-        <div className="mx-auto max-w-3xl">
-          <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
+      <section className="hero-dark noise-overlay px-6 py-28 text-center text-white">
+        <div className="relative z-10 mx-auto max-w-3xl">
+          <div className="mb-6 inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5">
+            <span className="text-xs font-semibold tracking-wide text-blue-300">
+              Contact
+            </span>
+          </div>
+          <h1 className="mb-5 text-4xl font-bold tracking-tight sm:text-5xl">
             {heading}
           </h1>
-          <p className="text-lg text-gray-300">{description}</p>
+          <p className="text-lg leading-relaxed text-gray-400">
+            {description}
+          </p>
         </div>
       </section>
 
-      <section className="px-6 py-20">
-        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-2">
-          {/* Contact Info */}
-          <div>
-            <h2 className="mb-6 text-2xl font-bold text-gray-900">
+      {/* Content */}
+      <section className="px-6 py-24">
+        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-5">
+          {/* Sidebar */}
+          <div className="md:col-span-2">
+            <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
               Reach out directly.
             </h2>
-            <div className="space-y-6">
+            <p className="mb-8 text-sm leading-relaxed text-gray-500">
+              All conversations are treated as confidential.
+            </p>
+
+            <div className="space-y-4">
               {contacts.map((contact, i) => (
                 <div
                   key={i}
-                  className="rounded-xl border border-gray-100 bg-gray-50 p-6"
+                  className="card-hover rounded-2xl border border-gray-100 bg-gray-50/50 p-6"
                 >
-                  <p className="mb-1 text-sm font-semibold text-gray-900">
+                  <p className="mb-1.5 text-sm font-semibold text-gray-900">
                     {contact.label}
                   </p>
                   {contact.type === "email" ? (
                     <a
                       href={`mailto:${contact.value}`}
-                      className="text-sm text-blue-600 hover:text-blue-800"
+                      className="text-sm text-blue-600 transition-colors hover:text-blue-800"
                     >
                       {contact.value}
                     </a>
@@ -78,7 +90,7 @@ export default async function ContactPage() {
                       href={contact.value}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-blue-600 hover:text-blue-800"
+                      className="text-sm text-blue-600 transition-colors hover:text-blue-800"
                     >
                       Connect on LinkedIn
                     </a>
@@ -87,15 +99,32 @@ export default async function ContactPage() {
                   )}
                 </div>
               ))}
+
+              {/* LinkedIn */}
+              <div className="card-hover rounded-2xl border border-gray-100 bg-gray-50/50 p-6">
+                <p className="mb-1.5 text-sm font-semibold text-gray-900">
+                  Follow us
+                </p>
+                <a
+                  href="https://www.linkedin.com/company/pev-io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 transition-colors hover:text-blue-800"
+                >
+                  LinkedIn &rarr;
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Form */}
-          <div>
-            <h2 className="mb-2 text-2xl font-bold text-gray-900">
+          <div className="md:col-span-3">
+            <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
               {formHeading}
             </h2>
-            <p className="mb-6 text-sm text-gray-500">{formDescription}</p>
+            <p className="mb-8 text-sm leading-relaxed text-gray-500">
+              {formDescription}
+            </p>
             <ContactForm />
           </div>
         </div>

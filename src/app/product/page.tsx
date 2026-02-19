@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Product — PEVio",
+  title: "Product \u2014 PEVio",
   description:
     "Decision infrastructure for Private Equity. IC-ready diligence briefs, risk detection, and investment scoring.",
 };
@@ -16,24 +16,31 @@ export default async function ProductPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-gray-900 to-gray-800 px-6 py-24 text-center text-white">
-        <div className="mx-auto max-w-3xl">
-          <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
+      <section className="hero-dark noise-overlay px-6 py-28 text-center text-white">
+        <div className="relative z-10 mx-auto max-w-3xl">
+          <div className="mb-6 inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5">
+            <span className="text-xs font-semibold tracking-wide text-blue-300">
+              Product
+            </span>
+          </div>
+          <h1 className="mb-5 text-4xl font-bold tracking-tight sm:text-5xl">
             Decision infrastructure, not another dashboard.
           </h1>
-          <p className="text-lg text-gray-300">
+          <p className="text-lg leading-relaxed text-gray-400">
             PEVio is Applied Specialized Intelligence for Private Equity, built to produce the analysis your Investment Committee actually needs.
           </p>
         </div>
       </section>
 
       {/* The Problem */}
-      <section className="px-6 py-20">
+      <section className="px-6 py-24">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
-            The diligence bottleneck is a strategy problem, not a workflow problem.
-          </h2>
-          <div className="mx-auto max-w-3xl space-y-4 text-base leading-relaxed text-gray-500">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              The diligence bottleneck is a strategy problem, not a workflow problem.
+            </h2>
+          </div>
+          <div className="mx-auto max-w-2xl space-y-4 text-[15px] leading-relaxed text-gray-500">
             <p>
               A typical mid-market transaction consumes 500 to 1,100+ partner and analyst hours. Firms spend &pound;1 to &pound;5 million annually on manual document review, cross-referencing, and synthesis. Critical issues are missed depending on who reviews the room. And institutional knowledge walks out the door when team members move on.
             </p>
@@ -43,20 +50,20 @@ export default async function ProductPage() {
           </div>
 
           {/* Stats Strip */}
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-14 grid gap-4 md:grid-cols-3">
             {[
-              { metric: "500–1,100+", label: "hours per deal" },
-              { metric: "£1–5M", label: "annual DD cost" },
+              { metric: "500\u20131,100+", label: "hours per deal" },
+              { metric: "\u00a31\u20135M", label: "annual DD cost" },
               { metric: "75%", label: "of workflow still manual" },
             ].map((stat, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-gray-100 bg-gray-50 p-6 text-center"
+                className="card-hover rounded-2xl border border-gray-100 bg-gray-50/50 p-8 text-center"
               >
-                <div className="mb-1 text-3xl font-bold text-gray-900">
+                <div className="mb-1 text-3xl font-bold tracking-tight text-gray-900">
                   {stat.metric}
                 </div>
-                <div className="text-sm text-gray-500">{stat.label}</div>
+                <div className="text-sm text-gray-400">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -64,12 +71,14 @@ export default async function ProductPage() {
       </section>
 
       {/* What PEVio Delivers */}
-      <section className="border-t border-gray-100 bg-gray-50 px-6 py-20">
+      <section className="bg-gray-50/50 px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-12 text-center text-3xl font-bold text-gray-900">
-            What your IC receives.
-          </h2>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="mx-auto mb-16 max-w-2xl text-center">
+            <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              What your IC receives.
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
             {[
               {
                 title: "IC-Ready Diligence Briefs",
@@ -84,7 +93,7 @@ export default async function ProductPage() {
               {
                 title: "Investment Scoring Against Your Thesis",
                 description:
-                  "Each deal benchmarked against your fund's own criteria, historical performance, and sector focus. Not a generic ranking, but a transparent comparison to what your firm has done well before.",
+                  "Each deal benchmarked against your fund\u2019s own criteria, historical performance, and sector focus. Not a generic ranking, but a transparent comparison to what your firm has done well before.",
               },
               {
                 title: "Intelligence That Learns Your Fund",
@@ -94,9 +103,12 @@ export default async function ProductPage() {
             ].map((card, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm"
+                className="card-hover card-accent rounded-2xl border border-gray-100 bg-white p-8 shadow-sm"
               >
-                <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50">
+                  <div className="h-2 w-2 rounded-full bg-blue-500" />
+                </div>
+                <h3 className="mb-3 text-base font-semibold text-gray-900">
                   {card.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-gray-500">
@@ -109,51 +121,57 @@ export default async function ProductPage() {
       </section>
 
       {/* How It Works */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Built differently from generic AI.
           </h2>
-          <p className="text-base leading-relaxed text-gray-500">
+          <p className="text-[15px] leading-relaxed text-gray-500">
             PEVio orchestrates multiple specialized models across financial, legal, ESG, technology, and operational domains. These models work independently, then cross-reference and test findings against institutional due diligence frameworks before producing a single, consensus-driven output. Every insight includes the reasoning, the source, and the confidence level. No black boxes.
           </p>
         </div>
       </section>
 
       {/* Beyond Due Diligence */}
-      <section className="border-t border-gray-100 bg-gray-50 px-6 py-20">
+      <section className="bg-gray-50/50 px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <div className="mx-auto mb-12 max-w-3xl text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-900">
+          <div className="mx-auto mb-16 max-w-2xl text-center">
+            <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               From first data room to exit.
             </h2>
-            <p className="text-base text-gray-500">
+            <p className="text-[15px] text-gray-500">
               Most platforms stop when diligence ends. PEVio stays with the investment.
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
             {[
               {
                 phase: "Due Diligence",
+                num: "01",
                 details:
-                  "Source-linked briefs in hours. Anomaly detection. Investment scoring against your fund's thesis.",
+                  "Source-linked briefs in hours. Anomaly detection. Investment scoring against your fund\u2019s thesis.",
               },
               {
                 phase: "Portfolio Monitoring",
+                num: "02",
                 details:
                   "Continuous performance tracking against the original investment thesis. ESG compliance signals. Value creation opportunities surfaced as new data arrives.",
               },
               {
                 phase: "Exit Planning",
+                num: "03",
                 details:
                   "Readiness assessment. Valuation support. Systematic buyer engagement preparation.",
               },
             ].map((item, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm"
+                className="card-hover rounded-2xl border border-gray-100 bg-white p-8 shadow-sm"
               >
-                <h3 className="mb-3 text-lg font-semibold text-blue-600">
+                <span className="mb-4 inline-block text-xs font-bold tracking-wider text-blue-500">
+                  {item.num}
+                </span>
+                <h3 className="mb-3 text-base font-semibold text-gray-900">
                   {item.phase}
                 </h3>
                 <p className="text-sm leading-relaxed text-gray-500">
@@ -162,59 +180,40 @@ export default async function ProductPage() {
               </div>
             ))}
           </div>
-          <p className="mt-8 text-center text-sm font-medium text-gray-400">
-            Intelligence that compounds across every transaction and every holding period.
-          </p>
         </div>
       </section>
 
       {/* Why PEVio Is Different */}
-      <section className="px-6 py-20">
+      <section className="px-6 py-24">
         <div className="mx-auto max-w-5xl">
-          <h2 className="mb-12 text-center text-3xl font-bold text-gray-900">
+          <h2 className="mb-14 text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Not all AI is built for high-stakes decisions.
           </h2>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto rounded-2xl border border-gray-100">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-b border-gray-200">
-                  <th className="py-4 pr-6 font-medium text-gray-400"></th>
-                  <th className="py-4 pr-6 font-medium text-gray-400">Generic AI tools</th>
-                  <th className="py-4 pr-6 font-medium text-gray-400">Workflow / VDR platforms</th>
-                  <th className="py-4 pr-6 font-semibold text-blue-600">PEVio</th>
+                <tr className="bg-gray-50">
+                  <th className="px-6 py-4 font-medium text-gray-400"></th>
+                  <th className="px-6 py-4 font-medium text-gray-400">Generic AI tools</th>
+                  <th className="px-6 py-4 font-medium text-gray-400">Workflow / VDR</th>
+                  <th className="px-6 py-4 font-semibold text-blue-600">PEVio</th>
                 </tr>
               </thead>
-              <tbody className="text-gray-600">
-                <tr className="border-b border-gray-100">
-                  <td className="py-4 pr-6 font-medium text-gray-900">Designed for</td>
-                  <td className="py-4 pr-6">Broad use cases</td>
-                  <td className="py-4 pr-6">Document management</td>
-                  <td className="py-4 pr-6 font-medium text-gray-900">PE Investment Committees</td>
-                </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-4 pr-6 font-medium text-gray-900">Intelligence</td>
-                  <td className="py-4 pr-6">General language models</td>
-                  <td className="py-4 pr-6">Rules-based automation</td>
-                  <td className="py-4 pr-6 font-medium text-gray-900">Institutional DD frameworks, 1,000+ questions</td>
-                </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-4 pr-6 font-medium text-gray-900">Learning</td>
-                  <td className="py-4 pr-6">Static</td>
-                  <td className="py-4 pr-6">Static</td>
-                  <td className="py-4 pr-6 font-medium text-gray-900">Learns your fund&apos;s decision DNA over time</td>
-                </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-4 pr-6 font-medium text-gray-900">Explainability</td>
-                  <td className="py-4 pr-6">Limited or none</td>
-                  <td className="py-4 pr-6">N/A</td>
-                  <td className="py-4 pr-6 font-medium text-gray-900">Every conclusion source-linked, auditable, defensible</td>
-                </tr>
-                <tr>
-                  <td className="py-4 pr-6 font-medium text-gray-900">Lifecycle</td>
-                  <td className="py-4 pr-6">Point-in-time</td>
-                  <td className="py-4 pr-6">Diligence phase only</td>
-                  <td className="py-4 pr-6 font-medium text-gray-900">Diligence through exit</td>
-                </tr>
+              <tbody className="text-gray-500">
+                {[
+                  ["Designed for", "Broad use cases", "Document management", "PE Investment Committees"],
+                  ["Intelligence", "General language models", "Rules-based automation", "Institutional DD frameworks, 1,000+ questions"],
+                  ["Learning", "Static", "Static", "Learns your fund\u2019s decision DNA over time"],
+                  ["Explainability", "Limited or none", "N/A", "Every conclusion source-linked, auditable, defensible"],
+                  ["Lifecycle", "Point-in-time", "Diligence phase only", "Diligence through exit"],
+                ].map((row, i) => (
+                  <tr key={i} className="border-t border-gray-50">
+                    <td className="px-6 py-4 font-medium text-gray-900">{row[0]}</td>
+                    <td className="px-6 py-4">{row[1]}</td>
+                    <td className="px-6 py-4">{row[2]}</td>
+                    <td className="px-6 py-4 font-medium text-gray-900">{row[3]}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -222,14 +221,14 @@ export default async function ProductPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-gray-100 bg-gray-50 px-6 py-20 text-center">
-        <div className="mx-auto max-w-2xl">
-          <p className="mb-8 text-base leading-relaxed text-gray-500">
+      <section className="hero-dark noise-overlay px-6 py-24 text-center">
+        <div className="relative z-10 mx-auto max-w-xl">
+          <p className="mb-8 text-[15px] leading-relaxed text-gray-400">
             We are sharing the platform with a select group of funds. If you would like to see how PEVio handles a real data room, we would welcome the conversation.
           </p>
           <Link
             href="/contact"
-            className="inline-block rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-3.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg"
+            className="btn-primary inline-block rounded-full px-8 py-3.5 text-sm font-semibold text-white"
           >
             Request a Walkthrough
           </Link>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About — PEVio",
+  title: "About \u2014 PEVio",
   description:
     "Built by practitioners, for practitioners. Meet the team behind PEVio.",
 };
@@ -43,7 +43,7 @@ const defaultData = {
     {
       name: "Jiva.ai",
       description:
-        "PEVio's Applied Specialized Intelligence architecture is powered in partnership with Jiva.ai, specialists in multi-model orchestration, consensus-based accuracy, bounded supervised learning, and governance-grade audit trails. This partnership ensures that PEVio's analytical foundation meets the transparency and accountability standards that institutional investors require.",
+        "PEVio\u2019s Applied Specialized Intelligence architecture is powered in partnership with Jiva.ai, specialists in multi-model orchestration, consensus-based accuracy, bounded supervised learning, and governance-grade audit trails. This partnership ensures that PEVio\u2019s analytical foundation meets the transparency and accountability standards that institutional investors require.",
       url: undefined as string | undefined,
     },
   ],
@@ -61,27 +61,32 @@ export default async function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-gray-900 to-gray-800 px-6 py-24 text-center text-white">
-        <div className="mx-auto max-w-3xl">
-          <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
+      <section className="hero-dark noise-overlay px-6 py-28 text-center text-white">
+        <div className="relative z-10 mx-auto max-w-3xl">
+          <div className="mb-6 inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5">
+            <span className="text-xs font-semibold tracking-wide text-blue-300">
+              About
+            </span>
+          </div>
+          <h1 className="mb-5 text-4xl font-bold tracking-tight sm:text-5xl">
             Built by practitioners, for practitioners.
           </h1>
-          <p className="text-lg text-gray-300">
+          <p className="text-lg leading-relaxed text-gray-400">
             PEVio brings together decades of capital markets experience, operational execution, and AI innovation around a single conviction: private equity deserves intelligence infrastructure it can trust.
           </p>
         </div>
       </section>
 
       {/* Our Story */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-8 text-3xl font-bold text-gray-900">
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="mb-8 text-3xl font-bold tracking-tight text-gray-900">
             {missionHeading}
           </h2>
           {missionText.split("\n\n").map((paragraph, i) => (
             <p
               key={i}
-              className="mb-4 text-base leading-relaxed text-gray-500"
+              className="mb-5 text-[15px] leading-relaxed text-gray-500"
             >
               {paragraph}
             </p>
@@ -90,28 +95,28 @@ export default async function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="border-t border-gray-100 bg-gray-50 px-6 py-20">
+      <section className="bg-gray-50/50 px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-12 text-center text-3xl font-bold text-gray-900">
+          <h2 className="mb-14 text-center text-3xl font-bold tracking-tight text-gray-900">
             The team.
           </h2>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
             {team.map((member, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-gray-100 bg-white p-8 text-center"
+                className="card-hover overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm"
               >
                 {/* Photo */}
-                <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-blue-500 to-indigo-600">
+                <div className="flex h-48 items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50">
                   {member.photo ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={urlFor(member.photo).width(200).height(200).url()}
+                      src={urlFor(member.photo).width(300).height(300).url()}
                       alt={member.name}
                       className="h-full w-full object-cover"
                     />
                   ) : (
-                    <span className="text-2xl font-bold text-white">
+                    <span className="text-4xl font-bold text-gray-300">
                       {member.name
                         .split(" ")
                         .map((n) => n[0])
@@ -119,25 +124,27 @@ export default async function AboutPage() {
                     </span>
                   )}
                 </div>
-                <h3 className="mb-1 text-lg font-semibold text-gray-900">
-                  {member.name}
-                </h3>
-                <p className="mb-4 text-sm font-medium text-blue-600">
-                  {member.role}
-                </p>
-                <p className="text-sm leading-relaxed text-gray-500">
-                  {member.bio}
-                </p>
-                {member.linkedinUrl && (
-                  <a
-                    href={member.linkedinUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block text-sm font-medium text-blue-600 hover:text-blue-800"
-                  >
-                    LinkedIn
-                  </a>
-                )}
+                <div className="p-8">
+                  <h3 className="mb-1 text-base font-semibold text-gray-900">
+                    {member.name}
+                  </h3>
+                  <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-blue-600">
+                    {member.role}
+                  </p>
+                  <p className="text-sm leading-relaxed text-gray-500">
+                    {member.bio}
+                  </p>
+                  {member.linkedinUrl && (
+                    <a
+                      href={member.linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-block text-sm font-medium text-gray-400 transition-colors hover:text-blue-600"
+                    >
+                      LinkedIn &rarr;
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -145,18 +152,18 @@ export default async function AboutPage() {
       </section>
 
       {/* Partners */}
-      <section className="px-6 py-20">
+      <section className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-12 text-center text-3xl font-bold text-gray-900">
+          <h2 className="mb-14 text-center text-3xl font-bold tracking-tight text-gray-900">
             {partnersHeading}
           </h2>
           <div className="mx-auto max-w-2xl">
             {partners.map((partner, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-gray-100 bg-gray-50 p-8 text-center"
+                className="rounded-2xl border border-gray-100 bg-gray-50/50 p-10 text-center"
               >
-                <h3 className="mb-3 text-xl font-semibold text-gray-900">
+                <h3 className="mb-4 text-xl font-semibold text-gray-900">
                   {partner.name}
                 </h3>
                 <p className="text-sm leading-relaxed text-gray-500">
@@ -167,9 +174,9 @@ export default async function AboutPage() {
                     href={partner.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-block text-sm font-medium text-blue-600 hover:text-blue-800"
+                    className="mt-4 inline-block text-sm font-medium text-gray-400 transition-colors hover:text-blue-600"
                   >
-                    Visit {partner.name}
+                    Visit {partner.name} &rarr;
                   </a>
                 )}
               </div>
@@ -179,14 +186,14 @@ export default async function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-gray-100 bg-gray-50 px-6 py-20 text-center">
-        <div className="mx-auto max-w-2xl">
-          <p className="mb-8 text-base leading-relaxed text-gray-500">
+      <section className="hero-dark noise-overlay px-6 py-24 text-center">
+        <div className="relative z-10 mx-auto max-w-xl">
+          <p className="mb-8 text-[15px] leading-relaxed text-gray-400">
             If you would like to understand more about the team, the technology, or our approach, we are happy to arrange a conversation.
           </p>
           <Link
             href="/contact"
-            className="inline-block rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-3.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg"
+            className="btn-primary inline-block rounded-full px-8 py-3.5 text-sm font-semibold text-white"
           >
             Get in Touch
           </Link>

@@ -270,6 +270,7 @@ export const contactSubmissionSchema = defineType({
     defineField({ name: "name", title: "Name", type: "string" }),
     defineField({ name: "email", title: "Email", type: "string" }),
     defineField({ name: "company", title: "Company", type: "string" }),
+    defineField({ name: "role", title: "Role", type: "string" }),
     defineField({ name: "message", title: "Message", type: "text" }),
     defineField({
       name: "submittedAt",

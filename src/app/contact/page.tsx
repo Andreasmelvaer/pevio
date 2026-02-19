@@ -4,21 +4,26 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact — PEVio",
-  description: "Get in touch with the PEVio team. Request a demo.",
+  description: "Start a conversation with the PEVio team.",
 };
 
 export const revalidate = 60;
 
 const defaultData = {
-  heading: "Get in Touch",
+  heading: "Start a conversation.",
   description:
-    "Interested in seeing how PEVio can transform your due diligence? We'd love to hear from you.",
+    "Whether you are exploring how AI fits into your diligence process, evaluating PEVio for your fund, or interested in learning more about what we are building, we welcome the opportunity to speak. All conversations are treated as confidential.",
   contacts: [
     { label: "Hichem Frija", value: "hichem@pevio.ai", type: "email" },
-    { label: "Christian Hvamstad", value: "christian@pevio.ai", type: "email" },
+    {
+      label: "Christian A. Hvamstad",
+      value: "christian@pevio.ai",
+      type: "email",
+    },
   ],
-  formHeading: "Request a Demo",
-  formDescription: "Tell us about your fund and we'll show you how PEVio works.",
+  formHeading: "Request a walkthrough.",
+  formDescription:
+    "Tell us about your fund and where you are in your evaluation. We will arrange a confidential session tailored to your firm's context.",
 };
 
 export default async function ContactPage() {
@@ -26,9 +31,12 @@ export default async function ContactPage() {
 
   const heading = data?.heading || defaultData.heading;
   const description = data?.description || defaultData.description;
-  const contacts = data?.contacts?.length ? data.contacts : defaultData.contacts;
+  const contacts = data?.contacts?.length
+    ? data.contacts
+    : defaultData.contacts;
   const formHeading = data?.formHeading || defaultData.formHeading;
-  const formDescription = data?.formDescription || defaultData.formDescription;
+  const formDescription =
+    data?.formDescription || defaultData.formDescription;
 
   return (
     <>
@@ -46,11 +54,18 @@ export default async function ContactPage() {
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-2">
           {/* Contact Info */}
           <div>
-            <h2 className="mb-6 text-2xl font-bold text-gray-900">Reach Out Directly</h2>
+            <h2 className="mb-6 text-2xl font-bold text-gray-900">
+              Reach out directly.
+            </h2>
             <div className="space-y-6">
               {contacts.map((contact, i) => (
-                <div key={i} className="rounded-xl border border-gray-100 bg-gray-50 p-6">
-                  <p className="mb-1 text-sm font-semibold text-gray-900">{contact.label}</p>
+                <div
+                  key={i}
+                  className="rounded-xl border border-gray-100 bg-gray-50 p-6"
+                >
+                  <p className="mb-1 text-sm font-semibold text-gray-900">
+                    {contact.label}
+                  </p>
                   {contact.type === "email" ? (
                     <a
                       href={`mailto:${contact.value}`}
@@ -65,7 +80,7 @@ export default async function ContactPage() {
                       rel="noopener noreferrer"
                       className="text-sm text-blue-600 hover:text-blue-800"
                     >
-                      Connect on LinkedIn &rarr;
+                      Connect on LinkedIn
                     </a>
                   ) : (
                     <p className="text-sm text-gray-500">{contact.value}</p>
@@ -77,7 +92,9 @@ export default async function ContactPage() {
 
           {/* Form */}
           <div>
-            <h2 className="mb-2 text-2xl font-bold text-gray-900">{formHeading}</h2>
+            <h2 className="mb-2 text-2xl font-bold text-gray-900">
+              {formHeading}
+            </h2>
             <p className="mb-6 text-sm text-gray-500">{formDescription}</p>
             <ContactForm />
           </div>

@@ -4,72 +4,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Product — PEVio",
-  description: "Applied Specialized Intelligence for Private Equity due diligence.",
+  description:
+    "Decision infrastructure for Private Equity. IC-ready diligence briefs, risk detection, and investment scoring.",
 };
 
 export const revalidate = 60;
 
-const defaultData = {
-  heroHeading: "Applied Specialized Intelligence for Private Equity",
-  heroSubheading: "Decision infrastructure that thinks the way PE professionals think.",
-  problemHeading: "The Diligence Bottleneck",
-  problemDescription: "Mid-market GPs spend $1–5M per year on manual diligence. Each deal consumes 500–1,100+ partner hours, with 75% of the workflow still manual. Insights are trapped in analysts' heads and lost when teams transition.",
-  problemStats: [
-    { metric: "500–1,100+", label: "hours per deal" },
-    { metric: "$1–5M", label: "annual DD cost" },
-    { metric: "75%", label: "still manual" },
-  ],
-  solutionHeading: "What PEVio Is",
-  solutionDescription: "Applied Specialized Intelligence (ASI) for PE — not repurposed general AI. Trained on 1,800+ institutional due diligence questions, PEVio learns your fund's specific investment thesis and decision patterns.",
-  solutionPoints: [
-    { title: "PE-Native Intelligence", description: "Trained on institutional DD frameworks, not generic data." },
-    { title: "Fund-Specific Learning", description: "Learns your IC's decision patterns and what 'good deal' means for your fund." },
-    { title: "Audit-Ready Output", description: "Every conclusion source-linked. Built for LP and regulator scrutiny." },
-    { title: "Progressive Customization", description: "Becomes more valuable with each deal, tuned to your fund's DNA." },
-  ],
-  howHeading: "Consensus-Based ASI Architecture",
-  steps: [
-    { title: "Multi-Model Orchestration", description: "Specialized Financial, Legal, ESG, Tech, and Operational models work independently on your data room." },
-    { title: "Consensus Layer", description: "Models debate findings, cross-reference data, and test against institutional DD frameworks." },
-    { title: "Explainable Output", description: "Source-linked briefs with full audit trails. No black boxes — every insight is traceable." },
-  ],
-  lifecycleHeading: "Beyond Due Diligence",
-  lifecycleDescription: "PEVio's value compounds across the complete investment lifecycle.",
-  lifecyclePhases: [
-    { phase: "Due Diligence", details: "Source-linked briefs in hours. Anomaly detection. Investment Score vs fund thesis." },
-    { phase: "Portfolio Monitoring", details: "Real-time performance tracking. ESG monitoring. Value creation opportunity identification." },
-    { phase: "Exit Planning", details: "Exit readiness assessment. Valuation optimization. Buyer engagement support." },
-  ],
-  whyHeading: "Why PEVio Is Different",
-  whyDescription: "As general AI commoditizes, specialized intelligence becomes more valuable. PEVio is the decision layer that competitors can't replicate.",
-  differentiators: [
-    { title: "Generic AI Tools", description: "Broad but shallow. Speed-focused. One-size-fits-all analysis. Static models." },
-    { title: "Point Solutions", description: "Manage workflow steps, not decisions. No institutional memory." },
-    { title: "PEVio ASI", description: "Deep PE expertise. Trust-focused. Learns your fund's decision DNA. Gets smarter with every deal." },
-  ],
-};
-
 export default async function ProductPage() {
-  const data = await getProductPageData();
-
-  const d = {
-    heroHeading: data?.heroHeading || defaultData.heroHeading,
-    heroSubheading: data?.heroSubheading || defaultData.heroSubheading,
-    problemHeading: data?.problemHeading || defaultData.problemHeading,
-    problemDescription: data?.problemDescription || defaultData.problemDescription,
-    problemStats: data?.problemStats?.length ? data.problemStats : defaultData.problemStats,
-    solutionHeading: data?.solutionHeading || defaultData.solutionHeading,
-    solutionDescription: data?.solutionDescription || defaultData.solutionDescription,
-    solutionPoints: data?.solutionPoints?.length ? data.solutionPoints : defaultData.solutionPoints,
-    howHeading: data?.howHeading || defaultData.howHeading,
-    steps: data?.steps?.length ? data.steps : defaultData.steps,
-    lifecycleHeading: data?.lifecycleHeading || defaultData.lifecycleHeading,
-    lifecycleDescription: data?.lifecycleDescription || defaultData.lifecycleDescription,
-    lifecyclePhases: data?.lifecyclePhases?.length ? data.lifecyclePhases : defaultData.lifecyclePhases,
-    whyHeading: data?.whyHeading || defaultData.whyHeading,
-    whyDescription: data?.whyDescription || defaultData.whyDescription,
-    differentiators: data?.differentiators?.length ? data.differentiators : defaultData.differentiators,
-  };
+  await getProductPageData();
 
   return (
     <>
@@ -77,42 +19,89 @@ export default async function ProductPage() {
       <section className="bg-gradient-to-br from-gray-900 to-gray-800 px-6 py-24 text-center text-white">
         <div className="mx-auto max-w-3xl">
           <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
-            {d.heroHeading}
+            Decision infrastructure, not another dashboard.
           </h1>
-          <p className="text-lg text-gray-300">{d.heroSubheading}</p>
+          <p className="text-lg text-gray-300">
+            PEVio is Applied Specialized Intelligence for Private Equity, built to produce the analysis your Investment Committee actually needs.
+          </p>
         </div>
       </section>
 
-      {/* Problem */}
+      {/* The Problem */}
       <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="mb-4 text-3xl font-bold text-gray-900">{d.problemHeading}</h2>
-          <p className="mb-12 max-w-3xl text-lg leading-relaxed text-gray-500">
-            {d.problemDescription}
-          </p>
-          <div className="grid gap-6 md:grid-cols-3">
-            {d.problemStats.map((stat, i) => (
-              <div key={i} className="rounded-xl border border-gray-100 bg-gray-50 p-8 text-center">
-                <div className="mb-2 text-4xl font-bold text-blue-600">{stat.metric}</div>
-                <div className="text-sm font-medium text-gray-500">{stat.label}</div>
+        <div className="mx-auto max-w-4xl">
+          <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
+            The diligence bottleneck is a strategy problem, not a workflow problem.
+          </h2>
+          <div className="mx-auto max-w-3xl space-y-4 text-base leading-relaxed text-gray-500">
+            <p>
+              A typical mid-market transaction consumes 500 to 1,100+ partner and analyst hours. Firms spend &pound;1 to &pound;5 million annually on manual document review, cross-referencing, and synthesis. Critical issues are missed depending on who reviews the room. And institutional knowledge walks out the door when team members move on.
+            </p>
+            <p>
+              The industry has tried to solve this with faster workflows and smarter data rooms. But the bottleneck is not speed of access. It is speed of judgement.
+            </p>
+          </div>
+
+          {/* Stats Strip */}
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              { metric: "500–1,100+", label: "hours per deal" },
+              { metric: "£1–5M", label: "annual DD cost" },
+              { metric: "75%", label: "of workflow still manual" },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="rounded-xl border border-gray-100 bg-gray-50 p-6 text-center"
+              >
+                <div className="mb-1 text-3xl font-bold text-gray-900">
+                  {stat.metric}
+                </div>
+                <div className="text-sm text-gray-500">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Solution */}
+      {/* What PEVio Delivers */}
       <section className="border-t border-gray-100 bg-gray-50 px-6 py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-4 text-3xl font-bold text-gray-900">{d.solutionHeading}</h2>
-          <p className="mb-12 max-w-3xl text-lg leading-relaxed text-gray-500">
-            {d.solutionDescription}
-          </p>
-          <div className="grid gap-6 md:grid-cols-2">
-            {d.solutionPoints.map((point, i) => (
-              <div key={i} className="rounded-xl border border-gray-100 bg-white p-8">
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">{point.title}</h3>
-                <p className="text-sm leading-relaxed text-gray-500">{point.description}</p>
+          <h2 className="mb-12 text-center text-3xl font-bold text-gray-900">
+            What your IC receives.
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            {[
+              {
+                title: "IC-Ready Diligence Briefs",
+                description:
+                  "Structured, source-linked analysis across financial, legal, operational, commercial, ESG, and technology domains. Every statement traceable to the original document.",
+              },
+              {
+                title: "Proactive Risk and Anomaly Detection",
+                description:
+                  "Inconsistencies between financial models and accounting treatments, revenue figures that diverge across submissions, covenant terms that do not align. Surfaced automatically, explained in context.",
+              },
+              {
+                title: "Investment Scoring Against Your Thesis",
+                description:
+                  "Each deal benchmarked against your fund's own criteria, historical performance, and sector focus. Not a generic ranking, but a transparent comparison to what your firm has done well before.",
+              },
+              {
+                title: "Intelligence That Learns Your Fund",
+                description:
+                  "PEVio progressively tunes to your investment thesis, decision patterns, and governance constraints. Over time, it does not answer generic diligence questions. It answers them as your fund would.",
+              },
+            ].map((card, i) => (
+              <div
+                key={i}
+                className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm"
+              >
+                <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                  {card.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-500">
+                  {card.description}
+                </p>
               </div>
             ))}
           </div>
@@ -121,80 +110,128 @@ export default async function ProductPage() {
 
       {/* How It Works */}
       <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="mb-12 text-3xl font-bold text-gray-900">{d.howHeading}</h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            {d.steps.map((step, i) => (
-              <div key={i} className="relative">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
-                  {i + 1}
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">{step.title}</h3>
-                <p className="text-sm leading-relaxed text-gray-500">{step.description}</p>
-              </div>
-            ))}
-          </div>
+        <div className="mx-auto max-w-3xl">
+          <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
+            Built differently from generic AI.
+          </h2>
+          <p className="text-base leading-relaxed text-gray-500">
+            PEVio orchestrates multiple specialized models across financial, legal, ESG, technology, and operational domains. These models work independently, then cross-reference and test findings against institutional due diligence frameworks before producing a single, consensus-driven output. Every insight includes the reasoning, the source, and the confidence level. No black boxes.
+          </p>
         </div>
       </section>
 
-      {/* Lifecycle */}
+      {/* Beyond Due Diligence */}
       <section className="border-t border-gray-100 bg-gray-50 px-6 py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-4 text-3xl font-bold text-gray-900">{d.lifecycleHeading}</h2>
-          <p className="mb-12 max-w-3xl text-lg text-gray-500">{d.lifecycleDescription}</p>
-          <div className="grid gap-6 md:grid-cols-3">
-            {d.lifecyclePhases.map((phase, i) => (
-              <div key={i} className="rounded-xl border border-gray-100 bg-white p-8">
-                <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-600">
-                  Phase {i + 1}
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">{phase.phase}</h3>
-                <p className="text-sm leading-relaxed text-gray-500">{phase.details}</p>
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">
+              From first data room to exit.
+            </h2>
+            <p className="text-base text-gray-500">
+              Most platforms stop when diligence ends. PEVio stays with the investment.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-3">
+            {[
+              {
+                phase: "Due Diligence",
+                details:
+                  "Source-linked briefs in hours. Anomaly detection. Investment scoring against your fund's thesis.",
+              },
+              {
+                phase: "Portfolio Monitoring",
+                details:
+                  "Continuous performance tracking against the original investment thesis. ESG compliance signals. Value creation opportunities surfaced as new data arrives.",
+              },
+              {
+                phase: "Exit Planning",
+                details:
+                  "Readiness assessment. Valuation support. Systematic buyer engagement preparation.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm"
+              >
+                <h3 className="mb-3 text-lg font-semibold text-blue-600">
+                  {item.phase}
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-500">
+                  {item.details}
+                </p>
               </div>
             ))}
           </div>
+          <p className="mt-8 text-center text-sm font-medium text-gray-400">
+            Intelligence that compounds across every transaction and every holding period.
+          </p>
         </div>
       </section>
 
-      {/* Why PEVio */}
+      {/* Why PEVio Is Different */}
       <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="mb-4 text-3xl font-bold text-gray-900">{d.whyHeading}</h2>
-          <p className="mb-12 max-w-3xl text-lg text-gray-500">{d.whyDescription}</p>
-          <div className="grid gap-6 md:grid-cols-3">
-            {d.differentiators.map((diff, i) => (
-              <div
-                key={i}
-                className={`rounded-xl border p-8 ${
-                  diff.title === "PEVio ASI"
-                    ? "border-blue-200 bg-blue-50"
-                    : "border-gray-100 bg-gray-50"
-                }`}
-              >
-                <h3 className={`mb-2 text-lg font-semibold ${
-                  diff.title === "PEVio ASI" ? "text-blue-700" : "text-gray-900"
-                }`}>
-                  {diff.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-gray-500">{diff.description}</p>
-              </div>
-            ))}
+        <div className="mx-auto max-w-5xl">
+          <h2 className="mb-12 text-center text-3xl font-bold text-gray-900">
+            Not all AI is built for high-stakes decisions.
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-gray-200">
+                  <th className="py-4 pr-6 font-medium text-gray-400"></th>
+                  <th className="py-4 pr-6 font-medium text-gray-400">Generic AI tools</th>
+                  <th className="py-4 pr-6 font-medium text-gray-400">Workflow / VDR platforms</th>
+                  <th className="py-4 pr-6 font-semibold text-blue-600">PEVio</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-600">
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 pr-6 font-medium text-gray-900">Designed for</td>
+                  <td className="py-4 pr-6">Broad use cases</td>
+                  <td className="py-4 pr-6">Document management</td>
+                  <td className="py-4 pr-6 font-medium text-gray-900">PE Investment Committees</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 pr-6 font-medium text-gray-900">Intelligence</td>
+                  <td className="py-4 pr-6">General language models</td>
+                  <td className="py-4 pr-6">Rules-based automation</td>
+                  <td className="py-4 pr-6 font-medium text-gray-900">Institutional DD frameworks, 1,000+ questions</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 pr-6 font-medium text-gray-900">Learning</td>
+                  <td className="py-4 pr-6">Static</td>
+                  <td className="py-4 pr-6">Static</td>
+                  <td className="py-4 pr-6 font-medium text-gray-900">Learns your fund&apos;s decision DNA over time</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 pr-6 font-medium text-gray-900">Explainability</td>
+                  <td className="py-4 pr-6">Limited or none</td>
+                  <td className="py-4 pr-6">N/A</td>
+                  <td className="py-4 pr-6 font-medium text-gray-900">Every conclusion source-linked, auditable, defensible</td>
+                </tr>
+                <tr>
+                  <td className="py-4 pr-6 font-medium text-gray-900">Lifecycle</td>
+                  <td className="py-4 pr-6">Point-in-time</td>
+                  <td className="py-4 pr-6">Diligence phase only</td>
+                  <td className="py-4 pr-6 font-medium text-gray-900">Diligence through exit</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-br from-gray-900 to-gray-800 px-6 py-20 text-center text-white">
+      <section className="border-t border-gray-100 bg-gray-50 px-6 py-20 text-center">
         <div className="mx-auto max-w-2xl">
-          <h2 className="mb-4 text-3xl font-bold">See PEVio in Action</h2>
-          <p className="mb-8 text-gray-300">
-            Request a demo and discover how Applied Specialized Intelligence can transform your fund&apos;s due diligence.
+          <p className="mb-8 text-base leading-relaxed text-gray-500">
+            We are sharing the platform with a select group of funds. If you would like to see how PEVio handles a real data room, we would welcome the conversation.
           </p>
           <Link
             href="/contact"
-            className="inline-block rounded-lg bg-white px-8 py-3.5 text-sm font-semibold text-gray-900 shadow-md transition hover:shadow-lg"
+            className="inline-block rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-3.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg"
           >
-            Request a Demo
+            Request a Walkthrough
           </Link>
         </div>
       </section>

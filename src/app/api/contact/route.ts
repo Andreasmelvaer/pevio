@@ -4,7 +4,7 @@ import { writeClient } from "@/sanity/writeClient";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, email, company, message } = body;
+    const { name, email, company, role, message } = body;
 
     if (!name || !email) {
       return NextResponse.json(
@@ -18,6 +18,7 @@ export async function POST(req: NextRequest) {
       name,
       email,
       company: company || "",
+      role: role || "",
       message: message || "",
       submittedAt: new Date().toISOString(),
     });

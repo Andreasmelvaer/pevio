@@ -38,15 +38,10 @@ const defaultData = {
       linkedinUrl: undefined as string | undefined,
     },
   ],
-  partnersHeading: "Technology partner.",
-  partners: [
-    {
-      name: "Jiva.ai",
-      description:
-        "PEVio\u2019s Applied Specialized Intelligence architecture is powered in partnership with Jiva.ai, specialists in multi-model orchestration, consensus-based accuracy, bounded supervised learning, and governance-grade audit trails. This partnership ensures that PEVio\u2019s analytical foundation meets the transparency and accountability standards that institutional investors require.",
-      url: undefined as string | undefined,
-    },
-  ],
+  partnersHeading: "Technology",
+  partnersSubheading: "Purpose-built for private markets. Engineered for accountable decisions.",
+  partnersDescription: "PEVio is architected specifically for private equity and growth capital environments, not retrofitted from a general-purpose AI stack.\n\nThe platform deploys multiple domain-specific intelligence engines operating in parallel across financial analysis, legal risk, commercial assessment, and regulatory context. Each output is cross-validated against structured investment frameworks and reconciled into a traceable, source-linked conclusion.\n\nThe learning architecture is intentionally bounded. PEVio adapts to a fund\u2019s historical decisions and realised outcomes, but only within predefined governance parameters and with human validation embedded at each stage of the workflow.\n\nEvery recommendation is auditable. Every conclusion is attributable. Human override remains explicit.\n\nSecurity and data governance are designed to institutional standards, with deployment models supporting on-premise, private cloud or sovereign infrastructure requirements.",
+  partners: [],
 };
 
 const localPhotos: Record<string, string> = {
@@ -62,6 +57,8 @@ export default async function AboutPage() {
   const missionText = data?.missionText || defaultData.missionText;
   const team = data?.team?.length ? data.team : defaultData.team;
   const partnersHeading = data?.partnersHeading || defaultData.partnersHeading;
+  const partnersSubheading = defaultData.partnersSubheading;
+  const partnersDescription = defaultData.partnersDescription;
   const partners = data?.partners?.length ? data.partners : defaultData.partners;
 
   return (
@@ -164,35 +161,23 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* Partners */}
+      {/* Technology */}
       <section className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-14 text-center text-3xl font-bold tracking-tight text-gray-900">
             {partnersHeading}
           </h2>
-          <div className="mx-auto max-w-2xl">
-            {partners.map((partner, i) => (
-              <div
+          <div className="mx-auto max-w-2xl rounded-2xl border border-gray-100 bg-gray-50/50 p-10">
+            <h3 className="mb-6 text-center text-xl font-semibold text-gray-900">
+              {partnersSubheading}
+            </h3>
+            {partnersDescription.split("\n\n").map((paragraph, i) => (
+              <p
                 key={i}
-                className="rounded-2xl border border-gray-100 bg-gray-50/50 p-10 text-center"
+                className="mb-4 text-sm leading-relaxed text-gray-500"
               >
-                <h3 className="mb-4 text-xl font-semibold text-gray-900">
-                  {partner.name}
-                </h3>
-                <p className="text-sm leading-relaxed text-gray-500">
-                  {partner.description}
-                </p>
-                {partner.url && (
-                  <a
-                    href={partner.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block text-sm font-medium text-gray-400 transition-colors hover:text-blue-600"
-                  >
-                    Visit {partner.name} &rarr;
-                  </a>
-                )}
-              </div>
+                {paragraph}
+              </p>
             ))}
           </div>
         </div>

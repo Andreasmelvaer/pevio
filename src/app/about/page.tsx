@@ -50,9 +50,9 @@ const defaultData = {
 };
 
 const localPhotos: Record<string, string> = {
-  "Hichem Frija": "/Hichem_Square.png",
-  "Christian A. Hvamstad": "/Christian_square.png",
-  "Andreas Larsson": "/Andreas_Square.png",
+  "Hichem Frija": "/Hichem_Square.jpg",
+  "Christian A. Hvamstad": "/Christian_square.jpg",
+  "Andreas Larsson": "/Andreas_Square.jpg",
 };
 
 export default async function AboutPage() {
@@ -113,7 +113,7 @@ export default async function AboutPage() {
                 className="card-hover overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm"
               >
                 {/* Photo */}
-                <div className="flex h-56 items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50">
+                <div className="flex aspect-square items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50">
                   {localPhotos[member.name] ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img

@@ -21,9 +21,9 @@ const client = createClient({
 });
 
 const photoMap = [
-  { name: "Hichem Frija", file: "Hichem_Square.png" },
-  { name: "Christian A. Hvamstad", file: "Christian_square.png" },
-  { name: "Andreas Larsson", file: "Andreas_Square.png" },
+  { name: "Hichem Frija", file: "Hichem_Square.jpg" },
+  { name: "Christian A. Hvamstad", file: "Christian_square.jpg" },
+  { name: "Andreas Larsson", file: "Andreas_Square.jpg" },
 ];
 
 async function uploadImage(filePath) {

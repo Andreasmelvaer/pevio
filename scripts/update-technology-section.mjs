@@ -1,5 +1,5 @@
 /**
- * Update the About Page in Sanity: replace Jiva.ai partner section with Technology section.
+ * Update the About Page in Sanity: remove Jiva.ai partner, update heading to Technology.
  *
  * Run from the project root:
  *   node scripts/update-technology-section.mjs
@@ -21,17 +21,21 @@ async function main() {
     process.exit(1);
   }
 
-  console.log("Updating About Page: removing Jiva.ai, adding Technology section...");
+  console.log("Current partners:", JSON.stringify(existing.partners, null, 2));
+  console.log("\nRemoving Jiva.ai and updating heading...");
 
   await client
     .patch(existing._id)
     .set({
       partnersHeading: "Technology",
-      partners: [],
     })
+    .unset(["partners"])
     .commit();
 
-  console.log("\n✅ Done! Jiva.ai removed, Technology heading updated in Sanity.");
+  // Verify
+  const updated = await client.fetch(`*[_type == "aboutPage"][0]{partnersHeading, partners}`);
+  console.log("\nAfter update:", JSON.stringify(updated, null, 2));
+  console.log("\n✅ Done! Jiva.ai removed from Sanity.");
 }
 
 main().catch((err) => {

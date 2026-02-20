@@ -56,10 +56,9 @@ export default async function AboutPage() {
   const missionHeading = data?.missionHeading || defaultData.missionHeading;
   const missionText = data?.missionText || defaultData.missionText;
   const team = data?.team?.length ? data.team : defaultData.team;
-  const partnersHeading = data?.partnersHeading || defaultData.partnersHeading;
+  const partnersHeading = defaultData.partnersHeading;
   const partnersSubheading = defaultData.partnersSubheading;
   const partnersDescription = defaultData.partnersDescription;
-  const partners = data?.partners?.length ? data.partners : defaultData.partners;
 
   return (
     <>

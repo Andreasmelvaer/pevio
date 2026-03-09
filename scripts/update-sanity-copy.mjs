@@ -32,7 +32,7 @@ async function main() {
     heading: "The Investment Committee's Right-Hand System.",
     tagline:
       "PEVio transforms unstructured deal data into IC-ready, auditable intelligence, from first data room access through portfolio exit. Decision infrastructure built by investment professionals, not a chatbot repurposed for finance.",
-    sidebarHeadingLine1: "Applied Specialized",
+    sidebarHeadingLine1: "Applied Specialised",
     sidebarHeadingLine2: "Intelligence for PE",
     sidebarBrandName: "PEVio",
     features: [
@@ -123,7 +123,7 @@ async function main() {
         _key: "jiva-ai",
         name: "Jiva.ai",
         description:
-          "PEVio's Applied Specialized Intelligence architecture is powered in partnership with Jiva.ai, specialists in multi-model orchestration, consensus-based accuracy, bounded supervised learning, and governance-grade audit trails. This partnership ensures that PEVio's analytical foundation meets the transparency and accountability standards that institutional investors require.",
+          "PEVio's Applied Specialised Intelligence architecture is powered in partnership with Jiva.ai, specialists in multi-model orchestration, consensus-based accuracy, bounded supervised learning, and governance-grade audit trails. This partnership ensures that PEVio's analytical foundation meets the transparency and accountability standards that institutional investors require.",
       },
     ],
   });

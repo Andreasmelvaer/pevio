@@ -23,7 +23,7 @@ export default function Footer() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/Logo_white.png" alt="PEVio" width={47} height={16} />
             <p className="mt-4 text-sm leading-relaxed text-gray-500">
-              Applied Specialized Intelligence
+              Applied Specialised Intelligence
               <br />
               for Private Equity
             </p>

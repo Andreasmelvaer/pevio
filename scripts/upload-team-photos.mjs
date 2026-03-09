@@ -82,7 +82,7 @@ async function main() {
       _type: "aboutPage",
       missionHeading: "Our Mission",
       missionText:
-        "We believe investment committees deserve specialized intelligence they can trust, explain, and defend. PEVio is building the decision infrastructure that makes every PE deal smarter — audit-ready insight from diligence through exit.",
+        "We believe investment committees deserve specialised intelligence they can trust, explain, and defend. PEVio is building the decision infrastructure that makes every PE deal smarter — audit-ready insight from diligence through exit.",
       team: teamWithPhotos,
       partnersHeading: "Technology Partner",
       partners: [

@@ -20,7 +20,7 @@ export const splashPageSchema = defineType({
       rows: 3,
       description: "Subheading text below the main heading",
       initialValue:
-        "Applied Specialized Intelligence for Private Equity. Decision infrastructure, not data management.",
+        "Applied Specialised Intelligence for Private Equity. Decision infrastructure, not data management.",
     }),
     defineField({
       name: "sidebarHeadingLine1",
@@ -103,7 +103,7 @@ export const productPageSchema = defineType({
   type: "document",
   fields: [
     // Hero
-    defineField({ name: "heroHeading", title: "Hero Heading", type: "string", initialValue: "Applied Specialized Intelligence for Private Equity" }),
+    defineField({ name: "heroHeading", title: "Hero Heading", type: "string", initialValue: "Applied Specialised Intelligence for Private Equity" }),
     defineField({ name: "heroSubheading", title: "Hero Subheading", type: "text", rows: 2, initialValue: "Decision infrastructure that thinks the way PE professionals think." }),
 
     // Problem
@@ -125,7 +125,7 @@ export const productPageSchema = defineType({
 
     // Solution
     defineField({ name: "solutionHeading", title: "Solution Section Heading", type: "string", initialValue: "What PEVio Is" }),
-    defineField({ name: "solutionDescription", title: "Solution Description", type: "text", rows: 3, initialValue: "Applied Specialized Intelligence (ASI) for PE — not repurposed general AI. Trained on 1,800+ institutional due diligence questions, PEVio learns your fund's specific investment thesis and decision patterns." }),
+    defineField({ name: "solutionDescription", title: "Solution Description", type: "text", rows: 3, initialValue: "Applied Specialised Intelligence (ASI) for PE — not repurposed general AI. Trained on 1,800+ institutional due diligence questions, PEVio learns your fund's specific investment thesis and decision patterns." }),
     defineField({
       name: "solutionPoints",
       title: "Solution Highlights",
@@ -175,7 +175,7 @@ export const productPageSchema = defineType({
 
     // Why PEVio
     defineField({ name: "whyHeading", title: "Why PEVio Heading", type: "string", initialValue: "Why PEVio Is Different" }),
-    defineField({ name: "whyDescription", title: "Why PEVio Description", type: "text", rows: 3, initialValue: "As general AI commoditizes, specialized intelligence becomes more valuable. PEVio is the decision layer that competitors can't replicate." }),
+    defineField({ name: "whyDescription", title: "Why PEVio Description", type: "text", rows: 3, initialValue: "As general AI commoditizes, specialised intelligence becomes more valuable. PEVio is the decision layer that competitors can't replicate." }),
     defineField({
       name: "differentiators",
       title: "Differentiators",
@@ -199,7 +199,7 @@ export const aboutPageSchema = defineType({
   type: "document",
   fields: [
     defineField({ name: "missionHeading", title: "Mission Heading", type: "string", initialValue: "Our Mission" }),
-    defineField({ name: "missionText", title: "Mission Statement", type: "text", rows: 4, initialValue: "We believe investment committees deserve specialized intelligence they can trust, explain, and defend. PEVio is building the decision infrastructure that makes every PE deal smarter." }),
+    defineField({ name: "missionText", title: "Mission Statement", type: "text", rows: 4, initialValue: "We believe investment committees deserve specialised intelligence they can trust, explain, and defend. PEVio is building the decision infrastructure that makes every PE deal smarter." }),
     defineField({
       name: "team",
       title: "Team Members",

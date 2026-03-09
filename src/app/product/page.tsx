@@ -27,7 +27,7 @@ export default async function ProductPage() {
             Decision infrastructure, not another dashboard.
           </h1>
           <p className="text-lg leading-relaxed text-gray-400">
-            PEVio is Applied Specialized Intelligence for Private Equity, built to produce the analysis your Investment Committee actually needs.
+            PEVio is Applied Specialised Intelligence for Private Equity, built to produce the analysis your Investment Committee actually needs.
           </p>
         </div>
       </section>
@@ -127,7 +127,7 @@ export default async function ProductPage() {
             Built differently from generic AI.
           </h2>
           <p className="text-[15px] leading-relaxed text-gray-500">
-            PEVio orchestrates multiple specialized models across financial, legal, ESG, technology, and operational domains. These models work independently, then cross-reference and test findings against institutional due diligence frameworks before producing a single, consensus-driven output. Every insight includes the reasoning, the source, and the confidence level. No black boxes.
+            PEVio orchestrates multiple specialised models across financial, legal, ESG, technology, and operational domains. These models work independently, then cross-reference and test findings against institutional due diligence frameworks before producing a single, consensus-driven output. Every insight includes the reasoning, the source, and the confidence level. No black boxes.
           </p>
         </div>
       </section>

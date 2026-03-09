@@ -6,7 +6,7 @@ const defaults = {
   heading: "The Investment Committee\u2019s Right-Hand System.",
   tagline:
     "PEVio transforms unstructured deal data into IC-ready, auditable intelligence, from first data room access through portfolio exit. Decision infrastructure built by investment professionals, not a chatbot repurposed for finance.",
-  sidebarHeadingLine1: "Applied Specialized",
+  sidebarHeadingLine1: "Applied Specialised",
   sidebarHeadingLine2: "Intelligence for PE",
   sidebarBrandName: "PEVio",
   features: [
@@ -69,7 +69,7 @@ export default async function Home() {
 
             <div className="mb-6 inline-block rounded-full border border-blue-100 bg-blue-50/50 px-4 py-1.5">
               <span className="text-xs font-semibold tracking-wide text-blue-600">
-                Applied Specialized Intelligence for PE
+                Applied Specialised Intelligence for PE
               </span>
             </div>
 

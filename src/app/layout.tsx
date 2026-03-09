@@ -7,11 +7,11 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PEVio — Applied Specialized Intelligence for PE",
+  title: "PEVio — Applied Specialised Intelligence for PE",
   description:
     "Decision infrastructure for Private Equity. Auditable intelligence from due diligence through exit.",
   openGraph: {
-    title: "PEVio — Applied Specialized Intelligence for PE",
+    title: "PEVio — Applied Specialised Intelligence for PE",
     description:
       "Decision infrastructure for Private Equity. Auditable intelligence from due diligence through exit.",
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PEVio — Applied Specialized Intelligence for PE",
+    title: "PEVio — Applied Specialised Intelligence for PE",
     description:
       "Decision infrastructure for Private Equity. Auditable intelligence from due diligence through exit.",
     images: ["/Sahring.jpg"],

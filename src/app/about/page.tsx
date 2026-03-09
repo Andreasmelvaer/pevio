@@ -37,6 +37,13 @@ const defaultData = {
       photo: null as null,
       linkedinUrl: undefined as string | undefined,
     },
+    {
+      name: "Line Hjartarson",
+      role: "Head of Product Design & Delivery",
+      bio: "Line works in the \u201cmessy middle\u201d between design and engineering, turning fuzzy requirements into shippable, scalable product experiences. She has led design and delivery for industrial data and security platforms as Director of Design at Omny and Principal Designer at Cognite, building interfaces and design systems that engineers and data scientists rely on. At PEVio, Line is Head of Product Design & Delivery, making our Applied Specialised Intelligence understandable, secure and trustworthy for investment teams, reducing adoption risk for customers and de\u2011risking product execution for investors through clear workflows, interfaces, and onboarding.",
+      photo: null as null,
+      linkedinUrl: undefined as string | undefined,
+    },
   ],
   partnersHeading: "Technology",
   partnersSubheading: "Purpose-built for private markets. Engineered for accountable decisions.",
@@ -48,6 +55,7 @@ const localPhotos: Record<string, string> = {
   "Hichem Frija": "/Hichem_Square.jpg",
   "Christian A. Hvamstad": "/Christian_square.jpg",
   "Andreas Larsson": "/Andreas_Square.jpg",
+  "Line Hjartarson": "/Line_Square.jpg",
 };
 
 export default async function AboutPage() {
@@ -102,7 +110,7 @@ export default async function AboutPage() {
           <h2 className="mb-14 text-center text-3xl font-bold tracking-tight text-gray-900">
             The team.
           </h2>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {team.map((member, i) => (
               <div
                 key={i}

@@ -40,7 +40,7 @@ const defaultData = {
     {
       name: "Line Hjartarson",
       role: "Head of Product Design & Delivery",
-      bio: "Line works in the \u201cmessy middle\u201d between design and engineering, turning fuzzy requirements into shippable, scalable product experiences. She has led design and delivery for industrial data and security platforms as Director of Design at Omny and Principal Designer at Cognite, building interfaces and design systems that engineers and data scientists rely on. At PEVio, Line is Head of Product Design & Delivery, making our Applied Specialised Intelligence understandable, secure and trustworthy for investment teams, reducing adoption risk for customers and de\u2011risking product execution for investors through clear workflows, interfaces, and onboarding.",
+      bio: "15+ years at the intersection of design and engineering, including Director of Design at Omny and Principal Designer at Cognite for data\u2011heavy industrial and security software. Leads PEVio\u2019s product design and delivery from MVP to operational platform, shaping UX, onboarding and roadmap so PE, VC and corporate M&A teams can adopt ASI with confidence and minimal change\u2011management friction.",
       photo: null as null,
       linkedinUrl: undefined as string | undefined,
     },

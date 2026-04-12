@@ -103,3 +103,83 @@
     pointer-events: none;
   }
 }
+
+/* Print slides container — positioned off-screen but fully laid out */
+.print-all-slides {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  width: 1920px;
+}
+
+.print-slide {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  position: relative;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+/* Print styles for deck PDF export */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide everything */
+  body > * {
+    display: none !important;
+  }
+
+  /* Show only the print slides */
+  .print-all-slides {
+    display: block !important;
+    position: static !important;
+    left: auto !important;
+    width: 100% !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .deck-viewer {
+    display: block !important;
+    position: static !important;
+    background: white !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  /* Hide the live slide viewer */
+  .slide-container,
+  .deck-viewer > .relative:first-child {
+    display: none !important;
+  }
+
+  .print-slide {
+    width: 100vw !important;
+    height: 56.25vw !important;
+    page-break-after: always;
+    page-break-inside: avoid;
+    break-after: page;
+    break-inside: avoid;
+  }
+
+  .print-slide:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  @page {
+    size: 297mm 167mm landscape;
+    margin: 0;
+  }
+}

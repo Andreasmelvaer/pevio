@@ -13,14 +13,7 @@ const defaultData = {
   heading: "Start a conversation.",
   description:
     "Whether you are exploring how AI fits into your diligence process, evaluating PEVio for your fund, or interested in learning more about what we are building, we welcome the opportunity to speak. All conversations are treated as confidential.",
-  contacts: [
-    { label: "Hichem Frija", value: "hichem@pevio.ai", type: "email" },
-    {
-      label: "Christian A. Hvamstad",
-      value: "christian@pevio.ai",
-      type: "email",
-    },
-  ],
+  contacts: [] as { label: string; value: string; type: string }[],
   formHeading: "Request a walkthrough.",
   formDescription:
     "Tell us about your fund and where you are in your evaluation. We will arrange a confidential session tailored to your firm's context.",

@@ -21,7 +21,7 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (pathname?.startsWith("/studio")) return null;
+  if (pathname?.startsWith("/studio") || pathname?.startsWith("/deck")) return null;
 
   return (
     <nav

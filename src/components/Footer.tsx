@@ -12,7 +12,7 @@ const footerLinks = [
 export default function Footer() {
   const pathname = usePathname();
 
-  if (pathname?.startsWith("/studio")) return null;
+  if (pathname?.startsWith("/studio") || pathname?.startsWith("/deck")) return null;
 
   return (
     <footer className="border-t border-white/5 bg-[#0a0f1a] text-white">
@@ -60,18 +60,6 @@ export default function Footer() {
                 className="text-sm text-gray-400 transition-colors hover:text-white"
               >
                 LinkedIn
-              </a>
-              <a
-                href="mailto:hichem@pevio.ai"
-                className="text-sm text-gray-400 transition-colors hover:text-white"
-              >
-                hichem@pevio.ai
-              </a>
-              <a
-                href="mailto:christian@pevio.ai"
-                className="text-sm text-gray-400 transition-colors hover:text-white"
-              >
-                christian@pevio.ai
               </a>
             </div>
           </div>

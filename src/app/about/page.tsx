@@ -33,7 +33,7 @@ const defaultData = {
     {
       name: "Andreas Larsson",
       role: "Technology and Customer Success",
-      bio: "20+ years delivering complex B2B SaaS to regulated enterprises. Built Symbrio Norway to 40 enterprise clients and multi-MNOK revenue, leading to acquisition. 50+ enterprise implementations. Andreas ensures that what PEVio promises, it delivers.",
+      bio: "20 years delivering complex B2B SaaS in regulated enterprises. Built Symbrio Norway to 40 enterprise clients and multimillion NOK revenue. Symbrio was subsequently acquired by Valoris. Led 50 enterprise implementations training 1,500 users. Focused on technology management and executive rollouts.",
       photo: null as null,
       linkedinUrl: undefined as string | undefined,
     },
